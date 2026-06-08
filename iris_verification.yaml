@@ -1,0 +1,21 @@
+general:
+  device: cpu
+  seed: 42
+
+model:
+  onnx_path: /home/jrkim/kimjeongmin/trustworthy-ai-assignment4/iris_model.onnx
+  input_shape: [-1, 4]
+
+specification:
+  vnnlib_path: /home/jrkim/kimjeongmin/trustworthy-ai-assignment4/iris_property.vnnlib
+
+solver:
+  batch_size: 1
+  alpha-crown:
+    iteration: 100
+  beta-crown:
+    iteration: 50
+
+bab:
+  timeout: 60
+  max_domains: 1000

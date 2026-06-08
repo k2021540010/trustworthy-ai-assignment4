@@ -1,0 +1,21 @@
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+(declare-const Y_0 Real)
+(declare-const Y_1 Real)
+(declare-const Y_2 Real)
+
+; 입력 제약: epsilon=0.01 범위
+(assert (>= X_0 0.212222))
+(assert (<= X_0 0.232222))
+(assert (>= X_1 0.615000))
+(assert (<= X_1 0.635000))
+(assert (>= X_2 0.057797))
+(assert (<= X_2 0.077797))
+(assert (>= X_3 0.031667))
+(assert (<= X_3 0.051667))
+
+; 출력 제약: 클래스 0이 아닌 다른 클래스가 더 크면 falsified
+(assert (>= Y_1 Y_0))
+(assert (>= Y_2 Y_0))
